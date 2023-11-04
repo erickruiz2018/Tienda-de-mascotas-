@@ -24,7 +24,7 @@ def mostrar_mascotas_vendidas(mascotas):
 
 def guardar_mascotas_en_archivo(mascotas):
     try:
-        with open("macotas.db", "w") as archivo:
+        with open("Tienda_Macotas.db", "w") as archivo:
             for mascota in mascotas:
                 raza, precio, tipo_pago = mascota
                 archivo.write("{},{},{}\n".format(raza, precio, tipo_pago))
@@ -35,7 +35,7 @@ def guardar_mascotas_en_archivo(mascotas):
 def cargar_mascotas_desde_archivo():
     mascotas = []
     try:
-        with open("mascotas.db", "r") as archivo:
+        with open("Tienda_Mascotas.db", "r") as archivo:
             for linea in archivo:
                 datos = linea.strip().split(",")
                 raza = datos[0]
